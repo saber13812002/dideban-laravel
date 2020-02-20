@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "@amcharts/amcharts4": "^4.9.1",
         "font-awesome": "^4.7.0",
         "vue-axios": "^2.1.5",
         "vue-persian-datetime-picker": "^2.1.4",

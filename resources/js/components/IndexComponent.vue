@@ -38,7 +38,7 @@
         }
       },
       created() {
-      let uri = 'http://localhost:8000/api/infos';
+      let uri = 'https://dideban.liara.run/api/infos';
       this.axios.get(uri).then(response => {
         this.posts = response.data.data;
       });
@@ -46,7 +46,7 @@
     methods: {
       deletePost(id)
       {
-        let uri = `http://localhost:8000/api/info/delete/${id}`;
+        let uri = `https://dideban.liara.run/api/info/delete/${id}`;
         this.axios.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });

@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     requestOtp() {
-      let uri = `http://127.0.0.1:8000/api/v1/otp11/${this.formInline1.mobno}`;
+      let uri = `https://dideban.liara.run/api/v1/otp11/${this.formInline1.mobno}`;
       console.log(uri);
       this.axios.get(uri).then(response => {
         this.$router.push({

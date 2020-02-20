@@ -1766,6 +1766,51 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1819,7 +1864,7 @@ __webpack_require__.r(__webpack_exports__);
     requestOtp: function requestOtp() {
       var _this = this;
 
-      var uri = "http://127.0.0.1:8000/api/v1/otp22/".concat(this.$route.params.phone, "/").concat(this.formInline1.pin);
+      var uri = "https://dideban.liara.run/api/v1/otp22/".concat(this.$route.params.phone, "/").concat(this.formInline1.pin);
       console.log(uri);
       this.axios.get(uri).then(function (response) {
         if (response.data) {
@@ -1925,7 +1970,7 @@ __webpack_require__.r(__webpack_exports__);
     requestOtp: function requestOtp() {
       var _this = this;
 
-      var uri = "http://127.0.0.1:8000/api/v1/otp11/".concat(this.formInline1.mobno);
+      var uri = "https://dideban.liara.run/api/v1/otp11/".concat(this.formInline1.mobno);
       console.log(uri);
       this.axios.get(uri).then(function (response) {
         _this.$router.push({
@@ -2149,7 +2194,7 @@ __webpack_require__.r(__webpack_exports__);
     if (!jwt) this.$router.push({
       name: "reg"
     });
-    var uri = "http://127.0.0.1:8000/api/v1/info/me";
+    var uri = "https://dideban.liara.run/api/v1/info/me";
     console.log(uri);
     this.infoss.token = jwt;
     this.axios.post(uri, this.infoss).then(function (response) {
@@ -2159,10 +2204,10 @@ __webpack_require__.r(__webpack_exports__);
 
       if (_this.infoss.profile_picture) {
         _this.hasPic = true;
-        _this.profile_picture = "http://127.0.0.1:8000/images/avatars/" + _this.infoss.profile_picture;
+        _this.profile_picture = "https://dideban.liara.run/images/avatars/" + _this.infoss.profile_picture;
       }
 
-      _this.image_picker_url = "http://127.0.0.1:8000/image-upload?author_id=".concat(_this.$route.params.id); //http://127.0.0.1:8000/image-upload?author_id=155
+      _this.image_picker_url = "https://dideban.liara.run/image-upload?author_id=".concat(_this.$route.params.id); //https://dideban.liara.run/image-upload?author_id=155
 
       _this.loading = true;
       _this.save = true;
@@ -2178,7 +2223,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.save = false;
-      var uri = "http://127.0.0.1:8000/api/v1/info/me";
+      var uri = "https://dideban.liara.run/api/v1/info/me";
       this.axios.post(uri, this.infoss).then(function (response) {
         console.log(response);
         _this2.save = true;
@@ -2191,7 +2236,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       this.provLoad = false;
-      var uri = "http://127.0.0.1:8000/api/v1/province";
+      var uri = "https://dideban.liara.run/api/v1/province";
       console.log(uri);
       this.axios.get(uri).then(function (response) {
         console.log(response);
@@ -2209,7 +2254,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       this.counLoad = false;
-      var uri = "http://127.0.0.1:8000/api/v1/county/".concat(this.infoss.province);
+      var uri = "https://dideban.liara.run/api/v1/county/".concat(this.infoss.province);
       console.log(uri);
       this.axios.get(uri).then(function (response) {
         console.log(response);
@@ -2227,7 +2272,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this5 = this;
 
       this.cityLoad = false;
-      var uri = "http://127.0.0.1:8000/api/v1/city/".concat(this.infoss.county);
+      var uri = "https://dideban.liara.run/api/v1/city/".concat(this.infoss.county);
       console.log(uri);
       this.axios.get(uri).then(function (response) {
         console.log(response);
@@ -2318,9 +2363,157 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      infoss: {},
+      tasks: [{
+        id: 1,
+        icotitle: "Laravel",
+        countries: "AU"
+      }, {
+        id: 2,
+        icotitle: "Lara",
+        countries: "AU"
+      }, {
+        id: 4,
+        icotitle: "Lara",
+        countries: "IR"
+      }, {
+        id: 3,
+        icotitle: "Foo",
+        countries: "FR"
+      }],
+      provinces: [],
+      namayandes: [],
+      provLoad: false,
+      namLoad: false,
+      selectedCountry: "All",
+      map: null
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log("Component mounted.");
+  },
+  created: function created() {
+    this.getProvince();
+  },
+  computed: {
+    filteredCountry: function filteredCountry() {
+      var app = this;
+      var countries = app.selectedCountry;
+
+      if (countries === "All") {
+        return app.tasks;
+      } else {
+        return app.tasks.filter(function (task) {
+          return countries === "All" || task.countries === countries;
+        });
+      }
+    }
+  },
+  methods: {
+    onChange: function onChange() {
+      getNamayende();
+    },
+    getProvince: function getProvince() {
+      var _this = this;
+
+      this.provLoad = false;
+      var uri = "https://dideban.liara.run/api/v1/province";
+      console.log(uri);
+      this.axios.get(uri).then(function (response) {
+        console.log(response);
+        _this.provinces = response.data;
+        console.log(_this.provinces);
+        _this.provLoad = true; //this.getCounty();
+      })["catch"](function (error) {
+        console.log("Error provinces");
+        console.log(error);
+      });
+    },
+    getNamayande: function getNamayande() {
+      var _this2 = this;
+
+      this.namLoad = false;
+      var uri = "https://dideban.liara.run/api/v1/namayande/".concat(this.infoss.province);
+      console.log(uri);
+      this.axios.get(uri).then(function (response) {
+        console.log(response);
+        _this2.namayandes = response.data;
+        console.log(_this2.namayandes);
+        _this2.namLoad = true; //this.getCounty();
+      })["catch"](function (error) {
+        console.log("Error namayandes");
+        console.log(error);
+      });
+    }
   }
 });
 
@@ -2376,7 +2569,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    var uri = 'http://localhost:8000/api/infos';
+    var uri = 'https://dideban.liara.run/api/infos';
     this.axios.get(uri).then(function (response) {
       _this.posts = response.data.data;
     });
@@ -2385,7 +2578,7 @@ __webpack_require__.r(__webpack_exports__);
     deletePost: function deletePost(id) {
       var _this2 = this;
 
-      var uri = "http://localhost:8000/api/info/delete/".concat(id);
+      var uri = "https://dideban.liara.run/api/info/delete/".concat(id);
       this.axios["delete"](uri).then(function (response) {
         _this2.posts.splice(_this2.posts.indexOf(id), 1);
       });
@@ -6938,7 +7131,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.instagram{\n    /* background: url('http://127.0.0.1:8000//images/instagram.png'); */\n}\nbody {\n    background: #ddeefc;\n}\n.form-photo {\n    margin: 0 auto;\n    width: 199px;\n    border-radius: 50%;\n    border: 10px solid blue;\n}\n.profile_image {\n    border-radius: 50%;\n    border: 10px solid #539af3;\n}\nselect {\n  height: 40px !important;\n}\nh1 {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  top: -78px;\n  color: white;\n  margin: 0px;\n}\n.form {\n  width: 500px;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.wrapper {\n  min-height: 100vh;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  padding: 50px 15px;\n}\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity 0.5s;\n}\n.fade-enter,\n.fade-leave-active {\n  opacity: 0;\n}\n\n", ""]);
+exports.push([module.i, "\n.listbox {\n  margin-right: 33%;\n  width: 40%;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.devider {\n  padding: 15px;\n  display: inline;\n}\n.name {\n  width: 9%;\n  margin-left: 9%;\n}\n.code {\n  width: 9%;\n  margin-left: 9%;\n}\n.hoze {\n  width: 9%;\n  margin-left: 9%;\n}\n.list {\n  text-align: center;\n  background: #ebebeb;\n  color: #000;\n  display: block;\n  padding: 0 8px;\n  line-height: 26px;\n  margin: 2px 2px;\n  text-decoration: none;\n}\n.namayande {\n  display: inline;\n  font-size: initial;\n}\n#mapdiv {\n  width: 100%;\n  height: 500px;\n}\n.instagram {\n  /* background: url('https://dideban.liara.run//images/instagram.png'); */\n}\nbody {\n  background: #ddeefc;\n  font-family: yekan,byekan;\n}\n.form-photo {\n  margin: 0 auto;\n  width: 199px;\n  border-radius: 50%;\n  border: 10px solid blue;\n}\n.profile_image {\n  border-radius: 50%;\n  border: 10px solid #539af3;\n}\nselect {\n  height: 40px !important;\n}\nh1 {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  top: -54px;\n  color: white;\n  margin: 0px;\n}\n.form {\n  width: 500px;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.wrapper {\n  min-height: 100vh;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  padding: 50px 15px;\n}\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity 0.5s;\n}\n.fade-enter,\n.fade-leave-active {\n  opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -57765,9 +57958,11 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.provinces, function(item) {
-                        return _c("option", { domProps: { value: item.id } }, [
-                          _vm._v(_vm._s(item.name))
-                        ])
+                        return _c(
+                          "option",
+                          { key: item.id, domProps: { value: item.id } },
+                          [_vm._v(_vm._s(item.name))]
+                        )
                       })
                     ],
                     2
@@ -57834,9 +58029,11 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.counties, function(item) {
-                        return _c("option", { domProps: { value: item.id } }, [
-                          _vm._v(_vm._s(item.name))
-                        ])
+                        return _c(
+                          "option",
+                          { key: item.id, domProps: { value: item.id } },
+                          [_vm._v(_vm._s(item.name))]
+                        )
                       })
                     ],
                     2
@@ -57898,9 +58095,11 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.cities, function(item) {
-                        return _c("option", { domProps: { value: item.id } }, [
-                          _vm._v(_vm._s(item.name))
-                        ])
+                        return _c(
+                          "option",
+                          { key: item.id, domProps: { value: item.id } },
+                          [_vm._v(_vm._s(item.name))]
+                        )
                       })
                     ],
                     2
@@ -58078,71 +58277,217 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("form", { attrs: { id: "form1", runat: "server" } }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("section", { staticClass: "space100", attrs: { id: "contact" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { attrs: { id: "titles" } }, [
+            _c("div", { staticClass: "container map" }, [
+              _c("div", { staticClass: "row" }, [
+                _vm.provLoad
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("انتخاب استان")]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.infoss.province,
+                              expression: "infoss.province"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          on: {
+                            change: [
+                              function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.$set(
+                                  _vm.infoss,
+                                  "province",
+                                  $event.target.multiple
+                                    ? $$selectedVal
+                                    : $$selectedVal[0]
+                                )
+                              },
+                              function($event) {
+                                return _vm.getNamayande()
+                              }
+                            ]
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "0" } }, [
+                            _vm._v("انتخاب استان")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.provinces, function(item) {
+                            return _c(
+                              "option",
+                              { key: item.id, domProps: { value: item.id } },
+                              [_vm._v(_vm._s(item.name))]
+                            )
+                          })
+                        ],
+                        2
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm._m(1)
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm.namLoad
+        ? _c(
+            "div",
+            { staticClass: "listbox" },
+            [
+              _c("h1", [_vm._v("لیست پیشنهادی")]),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._l(_vm.namayandes, function(item) {
+                return _c(
+                  "ul",
+                  {
+                    key: item.id,
+                    staticClass: "list",
+                    attrs: { value: item.id }
+                  },
+                  [
+                    _c("li", { staticClass: "namayande name" }, [
+                      _vm._v(
+                        "\n          " + _vm._s(item.name) + "\n          "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "devider" }),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "namayande code" }, [
+                      _vm._v(
+                        "\n          " + _vm._s(item.code) + "\n          "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "devider" }),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "namayande hoze" }, [
+                      _vm._v(
+                        "\n          " + _vm._s(item.hoze) + "\n          "
+                      )
+                    ])
+                  ]
+                )
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.namLoad ? _c("div", [_vm._v("loading")]) : _vm._e()
+    ]),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("form", { attrs: { id: "form1", runat: "server" } }, [
-      _c("section", { staticClass: "banner", attrs: { role: "banner" } }, [
-        _c("header", { attrs: { id: "header" } }, [
-          _c("div", { staticClass: "header-content clearfix" }, [
-            _c("a", { staticClass: "logo", attrs: { href: "#" } }, [
-              _c("img", { attrs: { src: "", alt: "" } })
-            ]),
-            _vm._v(" "),
-            _c(
-              "nav",
-              { staticClass: "navigation", attrs: { role: "navigation" } },
-              [_c("ul", { staticClass: "primary-nav" })]
-            ),
-            _vm._v(" "),
-            _c("a", { staticClass: "nav-toggle", attrs: { href: "#" } }, [
-              _vm._v("منو"),
-              _c("span")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "col-md-10 col-md-offset-1" }, [
-            _c("div", { staticClass: "banner-text text-center" }, [
-              _c("h1", [
-                _vm._v(
-                  "اسامی پیشنهادی نامزدهای انتخاباتی یازدهمین دور مجلس شورای اسلامی"
-                )
-              ])
-            ])
+    return _c("section", { staticClass: "banner", attrs: { role: "banner" } }, [
+      _c("header", { attrs: { id: "header" } }, [
+        _c("div", { staticClass: "header-content clearfix" }, [
+          _c("a", { staticClass: "logo", attrs: { href: "#" } }, [
+            _c("img", { attrs: { src: "", alt: "" } })
+          ]),
+          _vm._v(" "),
+          _c(
+            "nav",
+            { staticClass: "navigation", attrs: { role: "navigation" } },
+            [_c("ul", { staticClass: "primary-nav" })]
+          ),
+          _vm._v(" "),
+          _c("a", { staticClass: "nav-toggle", attrs: { href: "#" } }, [
+            _vm._v("\n          منو\n          "),
+            _c("span")
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "space100", attrs: { id: "contact" } }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "col-md-10 col-md-offset-1" }, [
+          _c("div", { staticClass: "banner-text text-center" }, [
+            _c("h1", [
+              _vm._v(
+                "اسامی پیشنهادی نامزدهای انتخاباتی یازدهمین دوره مجلس شورای اسلامی"
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "listed" } }, [_c("ul")])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "list" }, [
+      _c("li", { staticClass: "namayande name" }, [
+        _vm._v("\n          نام نام خانوادگی\n          ")
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "devider" }),
+      _vm._v(" "),
+      _c("li", { staticClass: "namayande code" }, [
+        _vm._v("\n          کد نماینده\n          ")
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "devider" }),
+      _vm._v(" "),
+      _c("li", { staticClass: "namayande hoze" }, [
+        _vm._v("\n          حوزه انتخابیه\n          ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "footer" }, [
+      _c("div", { staticClass: "footer-top" }, [
         _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" })
+          _c("div", { staticClass: "row" }, [
+            _c("img", { staticClass: "instagram" })
+          ])
         ])
       ]),
       _vm._v(" "),
-      _c("footer", { staticClass: "footer" }, [
-        _c("div", { staticClass: "footer-top" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("img", { staticClass: "instagram" })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "footer-bottom" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "col-md-12" }, [
-              _c("p", [
-                _vm._v(
-                  "\n                                کلیه حقوق محفوظ است\n                            "
-                )
-              ])
-            ])
+      _c("div", { staticClass: "footer-bottom" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c("p", [_vm._v("کلیه حقوق محفوظ است")])
           ])
         ])
       ])

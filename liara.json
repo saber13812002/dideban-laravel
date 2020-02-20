@@ -1,0 +1,6 @@
+{
+    "platform": "laravel",
+    "project": "dideban",
+    "port": 80,
+    "api-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YzNjMzU1YzdmY2MyMzAwMTI0MDM4NTkiLCJpYXQiOjE1NDc0NDk2OTJ9.sYkpectSmaKyJFrE6j9QeprSxdf3zx25oAkBWryI0-Q"
+}

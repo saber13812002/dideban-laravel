@@ -31,9 +31,6 @@ Route::post('v1/profile_picture', 'InfoController@profile_picture');
 Route::post('v1/upload_profile_picture', 'ImageUploadController@imageUploadSimple');
 
 
-Route::get('v1/province', 'ProvinceController@index');
-Route::get('v1/county/{id}', 'CountyController@index');
-Route::get('v1/city/{id}', 'CityController@index');
 
 Route::group(['middleware' => ['jwt.verify']], function () {
 
@@ -48,4 +45,7 @@ Route::group([
     // 'prefix' => 'api',
 ], function ($router) {
     Route::post('v1/info/me',  'InfoController@me');
+    Route::get('v1/province', 'ProvinceController@index');
+    Route::get('v1/namayande/{id}', 'NamayandeController@index');
+    Route::get('v1/city/{id}', 'CityController@index');
 });

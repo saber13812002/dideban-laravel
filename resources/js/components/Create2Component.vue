@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     requestOtp() {
-      let uri = `http://127.0.0.1:8000/api/v1/otp22/${this.$route.params.phone}/${this.formInline1.pin}`;
+      let uri = `https://dideban.liara.run/api/v1/otp22/${this.$route.params.phone}/${this.formInline1.pin}`;
       console.log(uri);
       this.axios.get(uri).then(response => {
         if (response.data) {

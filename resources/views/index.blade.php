@@ -121,7 +121,7 @@
                     <div class="feature-content">
                         <h5>{{$rule->title}}</h5>
                         <p>
-                            <a href="http://127.0.0.1:8000/{{$rule->link}}" class="btn btn-large">دریافت</a>
+                            <a href="https://dideban.liara.run/{{$rule->link}}" class="btn btn-large">دریافت</a>
                         </p>
 
                     </div>
@@ -144,8 +144,8 @@
                     </div>
                     @foreach ($games as $game)
                     <div class="col-lg-3 col-md-6 col-sm-6 work">
-                        <a href="http://127.0.0.1:8000/{{$game->link}}" class="work-box">
-                            <img src="http://127.0.0.1:8000/{{$game->link}}" alt="">
+                        <a href="https://dideban.liara.run/{{$game->link}}" class="work-box">
+                            <img src="https://dideban.liara.run/{{$game->link}}" alt="">
                             <div class="overlay">
                                 <div class="overlay-caption">
                                     <h5>{{$game->title}}</h5>
@@ -175,7 +175,7 @@
                     @foreach ($stats as $stat)
                     <div class="col-md-3 col-sm-6">
                         <div class="person">
-                            <img src="http://127.0.0.1:8000/{{$stat->link}}" alt="" class="img-responsive">
+                            <img src="https://dideban.liara.run/{{$stat->link}}" alt="" class="img-responsive">
                             <div class="person-content">
                                 <h4><strong>{{$stat->title}}</strong></h4>
                                 <h5 class="role"><strong>{{$stat->title2}}</strong></h5>

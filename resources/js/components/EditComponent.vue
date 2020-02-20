@@ -3,7 +3,7 @@
     <form :model="infoss" @submit.prevent="updateInfoss" v-if="loading" class="form">
       <h1>اطلاعات شما</h1>
       <div v-if="hasPic" class="form-photo">
-        <!-- <img v-bind:src=`http://127.0.0.1:8000/images/avatars/+ this.infoss.profile_picture` /> -->
+        <!-- <img v-bind:src=`https://dideban.liara.run/images/avatars/+ this.infoss.profile_picture` /> -->
         <img class="profile_image" v-bind:src="this.profile_picture" />
       </div>
 
@@ -94,7 +94,7 @@
         <label>انتخاب استان</label>
         <select class="form-control" v-model="infoss.province" @change="getCounty()">
           <option value="0">انتخاب استان</option>
-          <option v-for="item in provinces" :value="item.id">{{ item.name }}</option>
+          <option v-for="item in provinces" :value="item.id"  v-bind:key="item.id">{{ item.name }}</option>
         </select>
       </div>
 
@@ -109,7 +109,7 @@
         <label>انتخاب ناحیه</label>
         <select class="form-control" v-model="infoss.county" @change="getCity()">
           <option value="0">انتخاب ناحیه</option>
-          <option v-for="item in counties" :value="item.id">{{ item.name }}</option>
+          <option v-for="item in counties" :value="item.id"  v-bind:key="item.id">{{ item.name }}</option>
         </select>
       </div>
 
@@ -124,7 +124,7 @@
         <label>انتخاب شهر</label>
         <select class="form-control" v-model="infoss.city">
           <option value="0">انتخاب شهر</option>
-          <option v-for="item in cities" :value="item.id">{{ item.name }}</option>
+          <option v-for="item in cities" :value="item.id" v-bind:key="item.id">{{ item.name }}</option>
         </select>
       </div>
 
@@ -194,7 +194,7 @@ export default {
   created() {
     const jwt = localStorage.getItem("jwt");
     if (!jwt) this.$router.push({ name: "reg" });
-    let uri = `http://127.0.0.1:8000/api/v1/info/me`;
+    let uri = `https://dideban.liara.run/api/v1/info/me`;
     console.log(uri);
     this.infoss.token = jwt;
     this.axios
@@ -206,11 +206,11 @@ export default {
         if (this.infoss.profile_picture) {
           this.hasPic = true;
           this.profile_picture =
-            `http://127.0.0.1:8000/images/avatars/` +
+            `https://dideban.liara.run/images/avatars/` +
             this.infoss.profile_picture;
         }
-        this.image_picker_url = `http://127.0.0.1:8000/image-upload?author_id=${this.$route.params.id}`;
-        //http://127.0.0.1:8000/image-upload?author_id=155
+        this.image_picker_url = `https://dideban.liara.run/image-upload?author_id=${this.$route.params.id}`;
+        //https://dideban.liara.run/image-upload?author_id=155
         this.loading = true;
         this.save = true;
         this.getProvince();
@@ -223,7 +223,7 @@ export default {
   methods: {
     updateInfoss() {
       this.save = false;
-      let uri = `http://127.0.0.1:8000/api/v1/info/me`;
+      let uri = `https://dideban.liara.run/api/v1/info/me`;
       this.axios
         .post(uri, this.infoss)
         .then(response => {
@@ -237,7 +237,7 @@ export default {
     },
     getProvince() {
       this.provLoad = false;
-      let uri = `http://127.0.0.1:8000/api/v1/province`;
+      let uri = `https://dideban.liara.run/api/v1/province`;
       console.log(uri);
       this.axios
         .get(uri)
@@ -256,7 +256,7 @@ export default {
     },
     getCounty() {
       this.counLoad = false;
-      let uri = `http://127.0.0.1:8000/api/v1/county/${this.infoss.province}`;
+      let uri = `https://dideban.liara.run/api/v1/county/${this.infoss.province}`;
       console.log(uri);
       this.axios
         .get(uri)
@@ -274,7 +274,7 @@ export default {
     },
     getCity() {
       this.cityLoad = false;
-      let uri = `http://127.0.0.1:8000/api/v1/city/${this.infoss.county}`;
+      let uri = `https://dideban.liara.run/api/v1/city/${this.infoss.county}`;
       console.log(uri);
       this.axios
         .get(uri)

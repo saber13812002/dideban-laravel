@@ -16,7 +16,7 @@ return [
     /*
     * Matches the request origin. `[*]` allows all origins.
     */
-    'allowed_origins' => ['http://localhost:8000'],
+    'allowed_origins' => ['https://dideban.liara.run'],
 
     /*
     * Matches the request origin with, similar to `Request::is()`

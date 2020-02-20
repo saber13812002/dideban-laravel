@@ -15,7 +15,7 @@ class AddProvinceToInfos extends Migration
     {
         Schema::table('infos', function (Blueprint $table) {
             //
-            $table->integer('province')->after('shahr')->nullable();
+            $table->integer('province')->nullable();
             $table->integer('county')->after('province')->nullable();
             $table->integer('city')->after('county')->nullable();
         });
