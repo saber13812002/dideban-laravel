@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Kavenegar\Laravel\ServiceProvider::class,
+        Encore\Admin\AdminServiceProvider::class,
 
 
         /*
