@@ -10,9 +10,64 @@
 </template>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 100vw !important;
+  }
+  .listbox {
+    margin-right: 1% !important;
+    width: 98vw !important;
+    padding: 5px !important;
+  }
+
+  .name {
+    width: 9%;
+    margin-left: 1% !important;
+  }
+  .code {
+    width: 9%;
+    margin-left: 1% !important;
+  }
+  .hoze {
+    width: 9%;
+    margin-left: 1% !important;
+  }
+  .devider {
+    padding: 15px !important;
+  }
+  .deviderr {
+    padding: 1px !important;
+  }
+  h2 {
+    font-weight: 200 !important;
+    font-size: 17px !important;
+  }
+}
+.loader {
+  margin-right: 40%;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .listbox {
-  margin-right: 33%;
-  width: 40%;
+  margin-right: 20%;
+  width: 60%;
   background: #fff;
   -webkit-box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
@@ -22,7 +77,11 @@
   padding-top: 0%;
 }
 .devider {
-  padding: 15px;
+  padding: 10px;
+  display: inline;
+}
+.deviderr {
+  padding: 5px;
   display: inline;
 }
 .name {
@@ -60,7 +119,7 @@
 }
 body {
   background: #ddeefc;
-  font-family: yekan,byekan;
+  font-family: yekan, byekan;
 }
 .form-photo {
   margin: 0 auto;
@@ -75,7 +134,7 @@ body {
 select {
   height: 40px !important;
 }
-h1 {
+h2 {
   text-align: center;
   width: 100%;
   position: relative;

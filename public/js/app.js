@@ -1811,6 +1811,65 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2420,15 +2479,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2492,7 +2542,8 @@ __webpack_require__.r(__webpack_exports__);
         console.log(response);
         _this.provinces = response.data;
         console.log(_this.provinces);
-        _this.provLoad = true; //this.getCounty();
+        _this.provLoad = true;
+        _this.namLoad = true; //this.getCounty();
       })["catch"](function (error) {
         console.log("Error provinces");
         console.log(error);
@@ -7131,7 +7182,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.listbox {\n  margin-right: 33%;\n  width: 40%;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.devider {\n  padding: 15px;\n  display: inline;\n}\n.name {\n  width: 9%;\n  margin-left: 9%;\n}\n.code {\n  width: 9%;\n  margin-left: 9%;\n}\n.hoze {\n  width: 9%;\n  margin-left: 9%;\n}\n.list {\n  text-align: center;\n  background: #ebebeb;\n  color: #000;\n  display: block;\n  padding: 0 8px;\n  line-height: 26px;\n  margin: 2px 2px;\n  text-decoration: none;\n}\n.namayande {\n  display: inline;\n  font-size: initial;\n}\n#mapdiv {\n  width: 100%;\n  height: 500px;\n}\n.instagram {\n  /* background: url('https://dideban.liara.run//images/instagram.png'); */\n}\nbody {\n  background: #ddeefc;\n  font-family: yekan,byekan;\n}\n.form-photo {\n  margin: 0 auto;\n  width: 199px;\n  border-radius: 50%;\n  border: 10px solid blue;\n}\n.profile_image {\n  border-radius: 50%;\n  border: 10px solid #539af3;\n}\nselect {\n  height: 40px !important;\n}\nh1 {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  top: -54px;\n  color: white;\n  margin: 0px;\n}\n.form {\n  width: 500px;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.wrapper {\n  min-height: 100vh;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  padding: 50px 15px;\n}\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity 0.5s;\n}\n.fade-enter,\n.fade-leave-active {\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n@media only screen and (max-width: 600px) {\n.form {\n    width: 100vw !important;\n}\n.listbox {\n    margin-right: 1% !important;\n    width: 98vw !important;\n    padding: 5px !important;\n}\n.name {\n    width: 9%;\n    margin-left: 1% !important;\n}\n.code {\n    width: 9%;\n    margin-left: 1% !important;\n}\n.hoze {\n    width: 9%;\n    margin-left: 1% !important;\n}\n.devider {\n    padding: 15px !important;\n}\n.deviderr {\n    padding: 1px !important;\n}\nh2 {\n    font-weight: 200 !important;\n    font-size: 17px !important;\n}\n}\n.loader {\n  margin-right: 40%;\n  border: 16px solid #f3f3f3; /* Light grey */\n  border-top: 16px solid #3498db; /* Blue */\n  border-radius: 50%;\n  width: 120px;\n  height: 120px;\n  -webkit-animation: spin 2s linear infinite;\n          animation: spin 2s linear infinite;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n@-webkit-keyframes spin {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes spin {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n.listbox {\n  margin-right: 20%;\n  width: 60%;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.devider {\n  padding: 10px;\n  display: inline;\n}\n.deviderr {\n  padding: 5px;\n  display: inline;\n}\n.name {\n  width: 9%;\n  margin-left: 9%;\n}\n.code {\n  width: 9%;\n  margin-left: 9%;\n}\n.hoze {\n  width: 9%;\n  margin-left: 9%;\n}\n.list {\n  text-align: center;\n  background: #ebebeb;\n  color: #000;\n  display: block;\n  padding: 0 8px;\n  line-height: 26px;\n  margin: 2px 2px;\n  text-decoration: none;\n}\n.namayande {\n  display: inline;\n  font-size: initial;\n}\n#mapdiv {\n  width: 100%;\n  height: 500px;\n}\n.instagram {\n  /* background: url('https://dideban.liara.run//images/instagram.png'); */\n}\nbody {\n  background: #ddeefc;\n  font-family: yekan, byekan;\n}\n.form-photo {\n  margin: 0 auto;\n  width: 199px;\n  border-radius: 50%;\n  border: 10px solid blue;\n}\n.profile_image {\n  border-radius: 50%;\n  border: 10px solid #539af3;\n}\nselect {\n  height: 40px !important;\n}\nh2 {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  top: -54px;\n  color: white;\n  margin: 0px;\n}\n.form {\n  width: 500px;\n  background: #fff;\n  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);\n  border-radius: 10px;\n  padding: 35px;\n  border-top: 78px solid rgb(65, 125, 244);\n  padding-top: 0%;\n}\n.wrapper {\n  min-height: 100vh;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  padding: 50px 15px;\n}\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity 0.5s;\n}\n.fade-enter,\n.fade-leave-active {\n  opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -58357,7 +58408,7 @@ var render = function() {
             "div",
             { staticClass: "listbox" },
             [
-              _c("h1", [_vm._v("لیست پیشنهادی")]),
+              _c("h2", [_vm._v("لیست پیشنهادی")]),
               _vm._v(" "),
               _vm._m(2),
               _vm._v(" "),
@@ -58378,14 +58429,6 @@ var render = function() {
                     _vm._v(" "),
                     _c("li", { staticClass: "devider" }),
                     _vm._v(" "),
-                    _c("li", { staticClass: "namayande code" }, [
-                      _vm._v(
-                        "\n          " + _vm._s(item.code) + "\n          "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", { staticClass: "devider" }),
-                    _vm._v(" "),
                     _c("li", { staticClass: "namayande hoze" }, [
                       _vm._v(
                         "\n          " + _vm._s(item.hoze) + "\n          "
@@ -58399,7 +58442,7 @@ var render = function() {
           )
         : _vm._e(),
       _vm._v(" "),
-      !_vm.namLoad ? _c("div", [_vm._v("loading")]) : _vm._e()
+      !_vm.namLoad ? _c("div", { staticClass: "loader" }) : _vm._e()
     ]),
     _vm._v(" "),
     _vm._m(3)
@@ -58433,7 +58476,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "col-md-10 col-md-offset-1" }, [
           _c("div", { staticClass: "banner-text text-center" }, [
-            _c("h1", [
+            _c("h2", [
               _vm._v(
                 "اسامی پیشنهادی نامزدهای انتخاباتی یازدهمین دوره مجلس شورای اسلامی"
               )
@@ -58458,13 +58501,7 @@ var staticRenderFns = [
         _vm._v("\n          نام نام خانوادگی\n          ")
       ]),
       _vm._v(" "),
-      _c("li", { staticClass: "devider" }),
-      _vm._v(" "),
-      _c("li", { staticClass: "namayande code" }, [
-        _vm._v("\n          کد نماینده\n          ")
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "devider" }),
+      _c("li", { staticClass: "deviderr" }),
       _vm._v(" "),
       _c("li", { staticClass: "namayande hoze" }, [
         _vm._v("\n          حوزه انتخابیه\n          ")

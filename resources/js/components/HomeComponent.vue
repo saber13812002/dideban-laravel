@@ -23,7 +23,7 @@
       <div class="container">
         <div class="col-md-10 col-md-offset-1">
           <div class="banner-text text-center">
-            <h1>اسامی پیشنهادی نامزدهای انتخاباتی یازدهمین دوره مجلس شورای اسلامی</h1>
+            <h2>اسامی پیشنهادی نامزدهای انتخاباتی یازدهمین دوره مجلس شورای اسلامی</h2>
           </div>
           <!-- banner text -->
         </div>
@@ -63,20 +63,15 @@
       <!-- ./end row -->
 
       <div class="listbox" v-if="namLoad">
-        <h1>لیست پیشنهادی</h1>
+        <h2>لیست پیشنهادی</h2>
         <ul class="list">
           <li class="namayande name">
             <!-- <a href="#"> -->
             نام نام خانوادگی
             <!-- </a> -->
           </li>
-          <li class="devider"></li>
-          <li class="namayande code">
-            <!-- <a href="#"> -->
-            کد نماینده
-            <!-- </a> -->
-          </li>
-          <li class="devider"></li>
+
+          <li class="deviderr"></li>
           <li class="namayande hoze">
             <!-- <a href="#"> -->
             حوزه انتخابیه
@@ -89,12 +84,7 @@
             {{item.name}}
             <!-- </a> -->
           </li>
-          <li class="devider"></li>
-          <li class="namayande code">
-            <!-- <a href="#"> -->
-            {{item.code}}
-            <!-- </a> -->
-          </li>
+
           <li class="devider"></li>
           <li class="namayande hoze">
             <!-- <a href="#"> -->
@@ -104,7 +94,8 @@
         </ul>
       </div>
 
-      <div v-if="!namLoad">loading</div>
+      <div v-if="!namLoad" class="loader"></div>
+
     </section>
     <!-- End Contact -->
 
@@ -184,6 +175,7 @@ export default {
           console.log(this.provinces);
 
           this.provLoad = true;
+          this.namLoad = true;
           //this.getCounty();
         })
         .catch(error => {
