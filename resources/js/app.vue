@@ -15,8 +15,8 @@
     width: 100vw !important;
   }
   .listbox {
-    margin-right: 1% !important;
-    width: 98vw !important;
+    margin-right: 2% !important;
+    width: 92vw !important;
     padding: 5px !important;
   }
 
