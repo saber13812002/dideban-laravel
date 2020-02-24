@@ -16,7 +16,7 @@ return [
     /*
     * Matches the request origin. `[*]` allows all origins.
     */
-    'allowed_origins' => ['https://dideban.liara.run'],
+    'allowed_origins' => ['*'],
 
     /*
     * Matches the request origin with, similar to `Request::is()`

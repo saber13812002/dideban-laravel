@@ -47,5 +47,6 @@ Route::group([
     Route::post('v1/info/me',  'InfoController@me');
     Route::get('v1/province', 'ProvinceController@index');
     Route::get('v1/namayande/{id}', 'NamayandeController@index');
+    Route::get('v1/profile/{id}', 'NamayandeController@getbyid');
     Route::get('v1/city/{id}', 'CityController@index');
 });

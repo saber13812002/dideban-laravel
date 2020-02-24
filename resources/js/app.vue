@@ -9,8 +9,16 @@
   </div>
 </template>
 
+
 <style>
 @media only screen and (max-width: 600px) {
+  .col-md-4 {
+    width: 90% !important;
+  }
+
+  #IranMap .list li ul li {
+    width: 20% !important;
+  }
   .form {
     width: 100vw !important;
   }
@@ -43,6 +51,35 @@
     font-size: 17px !important;
   }
 }
+
+.mp-brief {
+  padding: 5px 0 15px;
+  background: #f1f1f1;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 5px solid #ab812f;
+  margin-bottom: 20px;
+  height: 100%;
+  min-height: 400px;
+}
+.mp-brief .pic img {
+  max-width: 100%;
+  width: auto !important;
+  height: auto;
+  border-radius: 0;
+  transition: all 0.9s ease 0s;
+  box-shadow: 0 0 0 0px #f7f5ec;
+  transform: scale(1) !important;
+  position: relative;
+  z-index: 2;
+  max-height: 255px;
+}
+
+.col-md-4 {
+  width: 33.33333333%;
+}
+
 .loader {
   margin-right: 40%;
   border: 16px solid #f3f3f3; /* Light grey */
@@ -114,9 +151,6 @@
   width: 100%;
   height: 500px;
 }
-.instagram {
-  /* background: url('https://dideban.liara.run//images/instagram.png'); */
-}
 body {
   background: #ddeefc;
   font-family: yekan, byekan;
@@ -167,6 +201,22 @@ h2 {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+.wanted {
+  font-size: 16px;
+  position: absolute;
+  right: 131px;
+  left: -33px;
+  top: 12px;
+  margin: auto;
+  padding: 16px 28px;
+  line-height: 24px;
+  border-radius: 968%;
+  width: 103px;
+  background: rgba(255, 0, 0, 0.68);
+  color: #fff;
+  z-index: 10000;
+  transform: rotate(-36deg);
 }
 </style>
 
