@@ -2876,8 +2876,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      api_url: "http://localhost:8000",
-      // api_url: "https://dideban.liara.run",
+      // api_url: process.env.MIX_APP_URL,
+      api_url: "https://dideban.liara.run",
       infoss: {},
       tasks: [{
         id: 1,
@@ -4766,8 +4766,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      api_url: "http://localhost:8000",
-      // api_url: "https://dideban.liara.run",
+      // api_url: process.env.MIX_APP_URL,
+      api_url: "https://dideban.liara.run",
       infoss: {},
       tasks: [{
         id: 1,

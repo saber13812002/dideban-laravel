@@ -1539,8 +1539,8 @@
 export default {
   data() {
     return {
-      api_url: process.env.MIX_APP_URL,
-      // api_url: "https://dideban.liara.run",
+      // api_url: process.env.MIX_APP_URL,
+      api_url: "https://dideban.liara.run",
       infoss: {},
       tasks: [
         { id: 1, icotitle: "Laravel", countries: "AU" },
