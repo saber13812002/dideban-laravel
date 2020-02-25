@@ -94,7 +94,7 @@
         <label>انتخاب استان</label>
         <select class="form-control" v-model="infoss.province" @change="getCounty()">
           <option value="0">انتخاب استان</option>
-          <option v-for="item in provinces" :value="item.id"  v-bind:key="item.id">{{ item.name }}</option>
+          <option v-for="item in provinces" :value="item.id" v-bind:key="item.id">{{ item.name }}</option>
         </select>
       </div>
 
@@ -109,7 +109,7 @@
         <label>انتخاب ناحیه</label>
         <select class="form-control" v-model="infoss.county" @change="getCity()">
           <option value="0">انتخاب ناحیه</option>
-          <option v-for="item in counties" :value="item.id"  v-bind:key="item.id">{{ item.name }}</option>
+          <option v-for="item in counties" :value="item.id" v-bind:key="item.id">{{ item.name }}</option>
         </select>
       </div>
 
@@ -192,6 +192,9 @@ export default {
   //   DatePicker: VuePersianDatetimePicker
   // },
   created() {
+      let app_url = process.env.APP_URL;
+      console.log("sa");
+      console.log(app_url);
     const jwt = localStorage.getItem("jwt");
     if (!jwt) this.$router.push({ name: "reg" });
     let uri = `https://dideban.liara.run/api/v1/info/me`;
@@ -239,6 +242,9 @@ export default {
       this.provLoad = false;
       let uri = `https://dideban.liara.run/api/v1/province`;
       console.log(uri);
+      let app_url = process.env.APP_URL;
+      console.log("sa");
+      console.log(app_url);
       this.axios
         .get(uri)
         .then(response => {
@@ -256,6 +262,9 @@ export default {
     },
     getCounty() {
       this.counLoad = false;
+      let app_url = process.env.APP_URL;
+      console.log("sa");
+      console.log(app_url);
       let uri = `https://dideban.liara.run/api/v1/county/${this.infoss.province}`;
       console.log(uri);
       this.axios

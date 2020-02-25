@@ -24,9 +24,10 @@ class NamayandeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getbyid($id)
     {
-        //
+        $a = namayande::where('id', $id)->first();
+        return $a->toJson();
     }
 
     /**

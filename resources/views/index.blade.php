@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/iranmap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
@@ -262,6 +263,28 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/iranmap.min.js"></script>
+
+        
+        <script type="text/javascript">
+            $(function() {
+                $('#IranMap .map .province path').click(function() {
+                    var province = $(this).attr('class');
+                    var provinceName = $('#IranMap .list>ul>li>ul>li.' + province + ' a').html();
+                    if (provinceName) {
+                        $('#IranMap .city').html('نمایش شهرهای استان ' + provinceName);
+                    }
+                });
+                $('#IranMap .list li.province>ul>li>a').click(function(e) {
+                    var provinceName = $(this).html();
+                    if (provinceName) {
+                        $('#IranMap .city').html('نمایش شهرهای استان ' + provinceName);
+                    }
+                    e.preventDefault();
+                });
+            });
+        </script>
+        
         <script>
             window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
         </script>
