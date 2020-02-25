@@ -75,9 +75,12 @@
   z-index: 2;
   max-height: 255px;
 }
-
+.space100 {
+  padding: 0px 0 !important;
+}
 .col-md-4 {
-  width: 33.33333333%;
+  margin-left: 10%;
+  width: 20.333333%;
 }
 
 .loader {
@@ -206,17 +209,20 @@ h2 {
   font-size: 16px;
   position: absolute;
   right: 131px;
-  left: -33px;
-  top: 12px;
+  left: -10px;
+  top: 2px;
   margin: auto;
-  padding: 16px 28px;
+  padding: 0px 25px;
   line-height: 24px;
-  border-radius: 968%;
-  width: 103px;
+  border-radius: 50%;
+  width: 95px;
   background: rgba(255, 0, 0, 0.68);
   color: #fff;
-  z-index: 10000;
-  transform: rotate(-36deg);
+  z-index: 9999999999;
+  transform: rotate(-28deg);
+}
+.btn-profile {
+  font-size: 27px;
 }
 </style>
 

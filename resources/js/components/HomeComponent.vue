@@ -361,7 +361,13 @@
     <!-- </a> -->
     <!-- </li> -->
     <section id="contact" class="space100" ref="contact" v-if="listVisible">
-      <div v-for="item in namayandes" :value="item.id" v-bind:key="item.id" class="mp-brief" style="max-width: 32%;    display: inline;">
+      <div
+        v-for="item in namayandes"
+        :value="item.id"
+        v-bind:key="item.id"
+        class="mp-brief"
+        style="max-width: 32%;    display: inline;"
+      >
         <div class="col-md-4 col-md-offset-0 col-xs-12 candidate-info-box Merit">
           <div class="mp-brief">
             <div class="pic">
@@ -398,7 +404,7 @@
               </a>-->
               <router-link
                 :to="{name: 'profile', params: { id: item.id }}"
-                class="btn btn-primary"
+                class="btn btn-primary btn-profile"
               >مشاهده پروفایل</router-link>
             </div>
           </div>
@@ -459,7 +465,9 @@ export default {
   data() {
     return {
       // api_url: process.env.MIX_APP_URL,
-      api_url: "https://dideban.liara.run",
+      api_url: process.env.MIX_APP_URL
+        ? process.env.MIX_APP_URL
+        : "https://dideban.liara.run",
       infoss: {},
       tasks: [
         { id: 1, icotitle: "Laravel", countries: "AU" },
